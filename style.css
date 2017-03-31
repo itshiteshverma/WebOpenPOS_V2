@@ -1,0 +1,155 @@
+#topContainer {
+    /*   background-image: url("background.jpg");*/
+    background: #FF4E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FF4E50, #F9D423);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FF4E50, #F9D423);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+}
+
+#title {
+    font-size: 300%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.centred {
+    text-align: center;
+}
+
+.title {
+    margin-top: 100px;
+    font-size: 300%;
+}
+
+.marginTop {
+    margin-top: 20px;
+}
+
+#contact {
+    background-color: lightblue;
+    margin-top: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+
+.appstoreicon {
+    width: 250px;
+}
+
+.alertMessage {
+    margin-top: 60px;
+}
+
+.mycustomAlert {
+    display: none;
+}
+
+///////////////
+
+/*
+Code snippet by maridlcrmn for Bootsnipp.com
+Follow me on Twitter @maridlcrmn
+*/
+
+.navbar-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.navbar-nav.navbar-right .btn {
+    position: relative;
+    z-index: 2;
+    padding: 4px 20px;
+    margin: 10px auto;
+}
+
+.navbar .navbar-collapse {
+    position: relative;
+}
+
+.navbar .navbar-collapse .navbar-right > li:last-child {
+    padding-left: 22px;
+}
+
+.navbar .nav-collapse {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding-right: 120px;
+    padding-left: 80px;
+    width: 100%;
+}
+
+.navbar.navbar-default .nav-collapse {
+    background-color: #f8f8f8;
+}
+
+.navbar.navbar-inverse .nav-collapse {
+    background-color: #222;
+}
+
+.navbar .nav-collapse .navbar-form {
+    border-width: 0;
+    box-shadow: none;
+}
+
+.nav-collapse>li {
+    float: right;
+}
+
+.btn.btn-circle {
+    border-radius: 50px;
+}
+
+.btn.btn-outline {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar .nav-collapse {
+        margin: 7.5px auto;
+        padding: 0;
+    }
+    .navbar .nav-collapse .navbar-form {
+        margin: 0;
+    }
+    .nav-collapse>li {
+        float: none;
+    }
+}
+
+.whiteText {
+    color: aliceblue
+}
+
+#mailchimp input[type="submit"] {
+    background: #115B87;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    width: 35%;
+    padding: 8px 0;
+}
+
+#mailchimp input[type="submit"]:hover {
+    color: #F2C94C
+}

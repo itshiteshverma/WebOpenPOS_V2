@@ -1,0 +1,1 @@
+SELECT reminder.r_id,reminder.u_id, reminder.start_date,reminder.end_date, reminder.time ,reminder.status,reminder.type, reminder.message, userdetails.email, userdetails.phoneno ,userdetails.name FROM reminder LEFT JOIN userdetails ON reminder.u_id=userdetails.id ORDER BY reminder.u_id;

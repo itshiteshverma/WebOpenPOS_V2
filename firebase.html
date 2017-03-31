@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>FireBase</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
+-->
+
+</head>
+
+<body>
+
+    <h1 id="bigOne"></h1>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB-sQoifv6wNC3jhjNbvzzhEkYeoJ2KLUs",
+            authDomain: "bloodsugar-1e1f9.firebaseapp.com",
+            databaseURL: "https://bloodsugar-1e1f9.firebaseio.com",
+            storageBucket: "bloodsugar-1e1f9.appspot.com",
+            messagingSenderId: "647088618197"
+        };
+        firebase.initializeApp(config);
+
+
+        var bigOne = document.getElementById('bigOne');
+        var dbRef = firebase.database().ref().child('text');
+        dbref.on('value', snap => bigOne.innerText = snap.val());
+    </script>
+
+</body>
+
+
+</html>

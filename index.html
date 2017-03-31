@@ -1,0 +1,265 @@
+<!doctype html>
+    <html>
+
+    <head>
+        <title>HitReminder</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="icon" href="logo.PNG" />
+
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#FCB110">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#FCB110">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#FCB110">
+
+        <!-- Latest compiled and minified CSS -->
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+        <!--        this is for swrl-->
+        <script src="jquery/sweetalert.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/sweetalert.css">
+
+
+        <!--
+        
+        this is for the animated gradiant
+-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+        <!-- Scrolling Nav JavaScript -->
+        <script src="./bootstrap/js/jquery.easing.min.js"></script>
+        <script src="./bootstrap/js/scrolling-nav.js"></script>
+
+        Custom CSS
+        <link href="./bootstrap/css/scrolling-nav.css" rel="stylesheet">
+
+
+       <link href="style.css" rel="stylesheet">
+        <style>
+            #brandLogo {
+                width: 250px;
+                height: 45px;
+            }
+            
+            .float-left {
+                float: left;
+                padding: 5px;
+            }
+            
+            .float-right {
+                float: right;
+            }
+            
+            #topRow {
+                padding-top: 80px;
+                text-align: center;
+            }
+            
+            #footer {
+                background-color: bisque;
+                margin-top: 200px;
+            }
+            
+            #topContainer {
+                background: #FF4E50;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #FF4E50, #F9D423);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #FF4E50, #F9D423);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+        </style>
+
+
+
+    </head>
+
+    <body id="page-top" data-target=".navbar-fixed-top">
+
+        <div class="container-fluid">
+
+            <!-- Second navbar for sign in -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand page-scroll" href="#topContainer"><span class="glyphicon glyphicon-time"></span>  Hit Reminder</a>
+
+
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="hidden">
+                                <a class="page-scroll" href="#topContainer"></a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#topContainer">Home</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#about">About</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="#footer">Contact</a>
+                            </li>
+
+                            <li>
+                                <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
+                            </li>
+                        </ul>
+                        <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">
+                            <form method="post" class="navbar-form navbar-right form-inline" role="form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="Email">Email</label>
+                                    <input type="email" name="loginemail" placeholder="Email" class="form-control" value="" autofocus required />
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="Password">Password</label>
+                                    <input type="password" name="loginpassword" placeholder="Password" class="form-control" value="" required/>
+                                </div>
+                                <input type="submit" class="btn btn-success" name="submit" value="Log In" />
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+
+
+        </div>
+        <!-- /.container-fluid -->
+
+
+
+        <div class="container contentContainer" id="topContainer">
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3" id="topRow">
+
+                    <div id="logo">
+
+                        <img src="hitReminderLogo.PNG">
+
+                    </div>
+
+
+
+                    <h1 id="title">Schedule a Reminder</h1>
+                    <p class="lead">Your Own Reminder</p>
+
+                    <form method="post">
+
+                        <div class="input-group">
+
+                            <span class="input-group-addon">User Name</span>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your Name Here" required/>
+
+                        </div>
+                        <br/>
+
+
+                        <div class="input-group">
+
+                            <span class="input-group-addon">Password</span>
+                            <input type="password" class="form-control" name="password" placeholder="Enter Your Password Here" required />
+
+                        </div>
+
+                        <br>
+                        <input type="submit" name="submit" value="Log In" class="btn btn-success btn-lg" id="paddingTopSubmitBtn" />
+                    </form>
+                    <br/>
+
+                </div>
+            </div>
+        </div>
+
+
+                    <div class="container contentContainer" id="about">
+                <div class="row" class="centred">
+                    <h1 class="centred title">Hit Reminder</h1>
+                    <p class="lead centred"> This App let you to create a reminder of any event,occasions or Birthdays</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 marginTop">
+                        <h2><span class="glyphicon glyphicon-wrench"></span> How Does it Work ?</h2>
+                        <br>
+                        <br>
+                        <h4>Simply Sign Up with your valid Email Address and Mobile No, After that you will be able to create a reminder,
+                    the reminder are send via Email and SMS.
+                        <br><br>In Email you get a more detailed reminder message, while in SMS just a small note</h4>
+
+
+                    </div>
+
+                    <div class="col-md-6 marginTop">
+                        <h2><span class="glyphicon glyphicon-check"></span> How to set a Reminder</h2>
+                        <br>
+                        <br>
+                        <h4>After Signing Up, Select the date of the Event, and then select the date after which we will start reminding you about the event, and then enter the type and message for the reminder,<br><br> You will get Email and SMS on daily basis after the date that you have set to <strong>"Start Reminding After"</strong> and at the end you will get a <strong>"Final Reminder"</strong> on the event date </h4>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="container contentContainer" id="footer">
+                <div class="row">
+                    <h1 class="centred title">Download the app</h1>
+                    <p class="centred lead">Really, Why should i download this</p>
+                    <p class="centred"><img src="appstore.png" class="appstoreicon" /></p>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <script type="text/javascript">
+                $(".contentContainer").css("height", $(window).height());
+
+                $(".numeric").numeric();
+            </script>
+    </body>
+
+
+    </html>
