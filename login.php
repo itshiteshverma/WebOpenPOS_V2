@@ -44,10 +44,15 @@ if((isset($_POST['submit'])) AND $_POST['submit']=="Sign Up" ){
 
             $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
 
-            $query = "INSERT INTO user(`name`,`password`,`email`,`phone_no`,`address`,`image`,`organization`) VALUES('".$_POST['name']."','".md5(md5($_POST['email']).$_POST['password'])."','".$_POST['email']."','".$_POST['phoneNo']."','".$_POST['address']."','".$file."','".$_POST['org']."')"; 
+            //            $query = "INSERT INTO user(`name`,`password`,`email`,`phone_no`,`address`,`image`,`organization`) VALUES('".$_POST['name']."','".md5(md5($_POST['email']).$_POST['password'])."','".$_POST['email']."','".$_POST['phoneNo']."','".$_POST['address']."','".$file."','".$_POST['org']."')"; 
+
+            $query="CALL insertUsers('".$_POST['name']."','".md5(md5($_POST['email']).$_POST['password'])."','".$_POST['org']."','".$_POST['address']."','".$_POST['email']."','".$_POST['phoneNo']."','".$file."','manager',@UserID)";
 
             if (mysqli_query($db, $query)) {
-                $_SESSION['id'] = mysqli_insert_id($db);
+
+                $select = mysqli_query($db, 'SELECT @UserID');
+                $result = mysqli_fetch_assoc($select);
+                $_SESSION['id'] = $result['@UserID'];
                 header("Location:mainpage.php");
             } else {
 
@@ -66,7 +71,7 @@ if((isset($_POST['submit'])) AND $_POST['submit']=="Sign Up" ){
 
 if((isset($_POST['submit'])) AND $_POST['submit']=="Log In"){
 
-    $query = "SELECT * FROM `user` WHERE email='".$_POST['loginemail']."' AND password='".md5(md5($_POST['loginemail']).$_POST['loginpassword'])."' LIMIT 1 ;";
+    $query = "SELECT * FROM `user` WHERE email='".$_POST['loginemail']."' AND password='".md5(md5($_POST['loginemail']).$_POST['loginpassword'])."' AND access='".$_POST['access']."' LIMIT 1 ;";
 
     $result = mysqli_query($db,$query);
 
@@ -80,6 +85,7 @@ if((isset($_POST['submit'])) AND $_POST['submit']=="Log In"){
         //re-direct to logged in page
     }else{
         $error = "We could not find You !!!!";
+       
     }
 
 }

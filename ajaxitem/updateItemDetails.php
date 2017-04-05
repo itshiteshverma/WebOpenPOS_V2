@@ -12,7 +12,7 @@ if(isset($_POST))
     $quantity = $_POST['quantity'];
 
     // Updaste User details
-    $query = "UPDATE item SET `remark` = '$remark', `price` = '$price', `quantity` = '$quantity' WHERE id = '$id'";
+    $query = "UPDATE item SET `remark` = '$remark', `price` = '$price', `quantity` = '$quantity' , `initial_quantity` = '$quantity' WHERE id = '$id'";
     if (!$result = mysqli_query($db,$query)) {
         exit(mysqli_error());
     }

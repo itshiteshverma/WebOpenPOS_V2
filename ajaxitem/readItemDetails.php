@@ -9,7 +9,7 @@ if(isset($_POST['id']) && isset($_POST['id']) != "")
     $item_id = $_POST['id'];
 
     // Get User Details
-    $query = "SELECT price,quantity,remark FROM item WHERE id = '$item_id'";
+    $query = "SELECT price,quantity,remark FROM item WHERE id = '$item_id' ORDER BY `quantity` DESC";
     if (!$result = mysqli_query($db,$query)) {
         exit(mysqli_error());
     }
