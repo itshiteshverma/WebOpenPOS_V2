@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("db_connection.php");
+include("../db_connection.php");
 
 
 $billNo = 0;
@@ -13,7 +13,7 @@ if(isset($_GET["bill_id"]))
 
     if(isset($_GET['remark'])){
         $remark = $_GET['remark'];
-        $query = "UPDATE billing SET remark = '$remark', user_id = ".$_SESSION['id']." WHERE bill_id = '$temp'";
+        $query = "UPDATE billing SET remark = '$remark', total_amount = '".$_GET['grand_total']."' ,employee_id = ".$_SESSION['id']." WHERE bill_id = '$temp'";
         if (!$result = mysqli_query($db,$query)) {
             exit(mysqli_error($db));
         }
@@ -105,17 +105,17 @@ if((isset($_POST['submit']))){
     <body >
         <?php
 
-        include("db_connection.php");
+        include("../db_connection.php");
 
         $bill_id = $_GET["bill_id"];
 
-        $query2 = "SELECT * FROM user WHERE id='".$_SESSION['id']."' LIMIT 1;";
+        $query2="SELECT * FROM user,org WHERE user.org_detail_id = org.id AND user.id='".$_SESSION['id']."'  LIMIT 1";
         $result2 = mysqli_query($db,$query2);
         $row = mysqli_fetch_array($result2);
 
         if($row){
 
-        $image=$row['image'];
+        $image=$row['logo'];
             if (!$result2 = mysqli_query($db,$query2)) {
                 exit(mysqli_error());
             }
@@ -132,7 +132,7 @@ if((isset($_POST['submit']))){
                             
                             <img class="img-responsive img-rounded" width="100" height="100"  onerror="this.src=\'images/noimg.png\'"  src="data:image/jpeg;base64,'.base64_encode($image).'"/>
                             
-                            <h2>'.$row['organization'].'</h2>
+                            <h2>'.$row['org_name'].'</h2>
                         </div>
 
                         <hr>
@@ -140,7 +140,7 @@ if((isset($_POST['submit']))){
                             <div class="col-xs-6">
                                 <address>
                                     <strong>Billed By:</strong><br>
-                                    Name - '.$row['name'].'<br>
+                                    Name - '.$row['user_name'].'<br>
                                     email - '.$row['email'].'<br>
                                     phone No - '.$row['phone_no'].'<br>
                                     Address - '.$row['address'].'

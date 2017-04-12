@@ -1,4 +1,7 @@
-<?php include 'itemTable.php'; ?> 
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,24 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Lumino - Tables</title>
 
-		<!--
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="bootstrap/css/datepicker3.css" rel="stylesheet">
-<link href="bootstrap/css/bootstrap-table.css" rel="stylesheet">
-<link href="bootstrap/css/styles.css" rel="stylesheet">
-
--->
-
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="bootstrap/css/datepicker3.css" rel="stylesheet">
-		<link href="bootstrap/css/stylesMain.css" rel="stylesheet">
-
-
 		<?php
-		include('packages.html');
+		include('packages_css.html');
 		?>
-
-
 
 
 		<style>
@@ -58,19 +46,117 @@
 				margin: 0 auto;
 				float: top;
 			}
+			
+			#loading {
+				background: #f4f4f2 repeat scroll 0 0;
+				height: 100%;
+				left: 0;
+				margin: auto;
+				position: fixed;
+				top: 0;
+				width: 100%;
+			}
+			.bokeh {
+				border: 0.01em solid rgba(150, 150, 150, 0.1);
+				border-radius: 50%;
+				font-size: 100px;
+				height: 1em;
+				list-style: outside none none;
+				margin: 0 auto;
+				position: relative;
+				top: 35%;
+				width: 1em;
+				z-index: 2147483647;
+			}
+			.bokeh li {
+				border-radius: 50%;
+				height: 0.2em;
+				position: absolute;
+				width: 0.2em;
+			}
+			.bokeh li:nth-child(1) {
+				animation: 1.13s linear 0s normal none infinite running rota, 3.67s ease-in-out 0s alternate none infinite running opa;
+				background: #00c176 none repeat scroll 0 0;
+				left: 50%;
+				margin: 0 0 0 -0.1em;
+				top: 0;
+				transform-origin: 50% 250% 0;
+			}
+			.bokeh li:nth-child(2) {
+				animation: 1.86s linear 0s normal none infinite running rota, 4.29s ease-in-out 0s alternate none infinite running opa;
+				background: #ff003c none repeat scroll 0 0;
+				margin: -0.1em 0 0;
+				right: 0;
+				top: 50%;
+				transform-origin: -150% 50% 0;
+			}
+			.bokeh li:nth-child(3) {
+				animation: 1.45s linear 0s normal none infinite running rota, 5.12s ease-in-out 0s alternate none infinite running opa;
+				background: #fabe28 none repeat scroll 0 0;
+				bottom: 0;
+				left: 50%;
+				margin: 0 0 0 -0.1em;
+				transform-origin: 50% -150% 0;
+			}
+			.bokeh li:nth-child(4) {
+				animation: 1.72s linear 0s normal none infinite running rota, 5.25s ease-in-out 0s alternate none infinite running opa;
+				background: #88c100 none repeat scroll 0 0;
+				margin: -0.1em 0 0;
+				top: 50%;
+				transform-origin: 250% 50% 0;
+			}
+			@keyframes opa {
+				12% {
+					opacity: 0.8;
+				}
+				19.5% {
+					opacity: 0.88;
+				}
+				37.2% {
+					opacity: 0.64;
+				}
+				40.5% {
+					opacity: 0.52;
+				}
+				52.7% {
+					opacity: 0.69;
+				}
+				60.2% {
+					opacity: 0.6;
+				}
+				66.6% {
+					opacity: 0.52;
+				}
+				70% {
+					opacity: 0.63;
+				}
+				79.9% {
+					opacity: 0.6;
+				}
+				84.2% {
+					opacity: 0.75;
+				}
+				91% {
+					opacity: 0.87;
+				}
+			}
 
+			@keyframes rota {
+				100% {
+					transform: rotate(360deg);
+				}
+			}
 
 		</style>
 
 	</head>
 
 	<body>
+
 		<?php
 		include('navBar.php');
 		include('sideBar.html');
-
 		?>
-
 
 		<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 
@@ -81,9 +167,23 @@
 					<h2>Items</h2>
 				</div>
 
+				
+				
+				<div class="container" id="beforeLoadingAnimation">
+					<div class="row">
+						
+						<div id="loading">
+							<ul class="bokeh">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
 
-				<div class="col-md-12">
+				<div class="col-md-12" id="afterLoadingContainer">
 					<div class="panel panel-default">
 						<div class="panel-body tabs">
 
@@ -180,7 +280,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 									<!-- // Modal -->
 
 									<!-- Modal -  Action details -->
-								
+
 
 
 
@@ -279,7 +379,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 					</div><!--/.panel-->
 				</div><!-- /.col-->
 
-				
+
 
 			</div><!-- /.row -->
 
@@ -291,15 +391,9 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 
 		</div><!--/.main-->
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-		
-		<script src="bootstrap/js/lumino.glyphs.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="bootstrap/js/easypiechart.js"></script>
-		<script src="bootstrap/js/easypiechart-data.js"></script>
-		<script src="bootstrap/js/bootstrap-datepicker.js"></script>
-		<script src="bootstrap/js/bootstrap-table.js"></script>
+		<?php
+		include('packages_js.html');
+		?>
 
 
 		<script>
@@ -318,15 +412,12 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 				if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 			});
 
-
-
 			// READ records
 			function readRecords() {
 				$.get("ajaxitem/readRecords.php", {}, function (data, status) {
 					$(".records_content").html(data);
 				});
 			}
-
 
 			function DeleteItem(id) {
 				var conf = confirm("Are you sure, do you really want to delete Item?");
@@ -399,12 +490,12 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 								backgroundColor: [
 									"rgba(0, 128, 0, 0.45)",
 									"rgba(255, 0, 0, 0.36)"
-									
+
 								],
 								hoverBackgroundColor: [
 									"#0ef844",
 									"#f23f3f"
-									
+
 								]
 							}]
 					};
@@ -454,6 +545,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 
 			$(document).ready(function () {
 				// READ recods on page load
+				$("#afterLoadingContainer").hide();
 				readRecords(); // calling function
 				$.ajax({
 					url: "ajaxitem/tableItemMain.php",
@@ -503,7 +595,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 						};
 
 
-						
+
 						var options =  {
 							responsive: true,
 							tooltips: {
@@ -552,7 +644,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 							}
 						};
 
-					
+
 
 
 						var ctx = $("#itemCanvas");
@@ -563,16 +655,14 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 							options: options
 
 						});
+						$("#beforeLoadingAnimation").hide();
+						$("#afterLoadingContainer").show();
 					},
 					error: function(data) {
 						console.log(data);
 					}
 				});
 			});
-
-
-
-
 
 			$(document).on('click', '#close-preview', function(){ 
 				$('.image-preview').popover('hide');
@@ -645,7 +735,7 @@ data-pagination="true" data-sort-name="name" data-sort-order="desc">
 
 <?php
 
-include("ajax/db_connection.php");
+include("db_connection.php");
 
 
 if ((isset($_POST['submit'])) AND $_POST['submit'] == "Create") {

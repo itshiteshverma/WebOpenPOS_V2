@@ -2,7 +2,7 @@
 if(isset($_POST['itemName']) && isset($_POST['price']) && isset($_POST['quantity']))
 {
 	// include Database connection file 
-	include("db_connection.php");
+	include("../db_connection.php");
 
 	// get values 
 	$itemName = $_POST['itemName'];
@@ -27,6 +27,4 @@ if(isset($_POST['itemName']) && isset($_POST['price']) && isset($_POST['quantity
 		echo "Error";
 	}
 
-
-}
 ?> 

@@ -1,6 +1,6 @@
 <?php
 	// include Database connection file 
-	include("db_connection.php");
+	include("../db_connection.php");
 
   if(isset($_POST['billNo']) && isset($_POST['billNo']) != ""){
 	// Design initial table header 

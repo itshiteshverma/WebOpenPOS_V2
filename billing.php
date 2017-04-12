@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
-include('navBar.php');
-include('sideBar.html');
+session_start();
 ?>
 <html>
 	<head>
@@ -10,7 +9,7 @@ include('sideBar.html');
 		<title>Lumino - Panels</title>
 
 		<?php
-		include('packages.html');
+		include('packages_css.html');
 		?>
 
 		<script src="bootstrap/js/star-rating.min.js"></script>
@@ -222,7 +221,10 @@ include('sideBar.html');
 	</head>
 
 	<body>
-
+		<?php
+		include('navBar.php');
+		include('sideBar.html');
+		?>
 
 		<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 
@@ -238,15 +240,10 @@ include('sideBar.html');
 					<div class="panel panel-default">
 						<div class="panel-body tabs">
 
-							<ul class="nav nav-pills">
-								<li class="active"><a href="#pilltab1" data-toggle="tab">Billing</a></li>
-								<li><a href="#pilltab2" data-toggle="tab">Tab 2</a></li>
-								<li><a href="#pilltab3" data-toggle="tab">Tab 3</a></li>
-							</ul>
-
+							
 							<div class="tab-content">
 								<div class="tab-pane fade in active" id="pilltab1">
-									<h4>Billing</h4>
+									
 									<form method="post">
 
 										<div class="form-group">
@@ -254,7 +251,7 @@ include('sideBar.html');
 											<input name='billNo' id="billNo" class="form-control" readonly type="number" value=
 												   <?php
 
-												   include("connection.php");
+												   include("db_connection.php");
 												   $query = "SELECT bill_id FROM billing ORDER BY bill_id DESC LIMIT 1;";
 												   $result = mysqli_query($db,$query);
 												   $row = mysqli_fetch_array($result);
@@ -273,7 +270,7 @@ include('sideBar.html');
 											<label>Select Item :</label>
 											<select class='selectpicker show-tick show-menu-arrow' id="itemName" name='itemName'  data-live-search='true' title='Choose one of the following...' required id='type' data-width="fit" data-size="6">
 												<?php
-												include("connection.php");
+												include("db_connection.php");
 												$sql = "SELECT name,image FROM item";
 												$result = $db->query($sql);
 
@@ -404,7 +401,7 @@ include('sideBar.html');
 
 
 												<?php
-												include("connection.php");
+												include("db_connection.php");
 												//												$sql = "SELECT * FROM item ";
 
 												$sql = "SELECT item_name, 
@@ -557,7 +554,9 @@ include('sideBar.html');
 
 		</div><!--/.main-->
 
-
+		<?php
+		include('packages_js.html');
+		?>
 
 
 		<script>

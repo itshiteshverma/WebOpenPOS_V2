@@ -1,6 +1,6 @@
 <?php
 	// include Database connection file 
-	include("db_connection.php");
+	include("../db_connection.php");
 
 // This is in the PHP file and sends a Javascript alert to the client
 

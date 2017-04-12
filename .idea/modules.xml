@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/HitInventory.iml" filepath="$PROJECT_DIR$/.idea/HitInventory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/WebOpenPOS.iml" filepath="$PROJECT_DIR$/.idea/WebOpenPOS.iml" />
     </modules>
   </component>
 </project>

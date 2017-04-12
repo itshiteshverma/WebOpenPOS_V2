@@ -2,7 +2,7 @@
 if(isset($_POST['billNo']) && isset($_POST['itemName']) && isset($_POST['quantity']))
 {
 	// include Database connection file 
-	include("db_connection.php");
+	include("../db_connection.php");
 
 	// get values 
 	$billNo = $_POST['billNo'];

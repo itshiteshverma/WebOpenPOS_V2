@@ -1,7 +1,5 @@
 <?php
-include('navBar.php');
-include('sideBar.html');
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,17 +8,9 @@ include('sideBar.html');
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Lumino - Dashboard</title>
 
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="bootstrap/css/datepicker3.css" rel="stylesheet">
-        <link href="bootstrap/css/stylesMain.css" rel="stylesheet">
-        <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">  
-        <!--Icons-->
-        <script src="bootstrap/js/lumino.glyphs.js"></script>
-
-        <!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
+         <?php
+		include('packages_css.html');
+		?>
 
         <style>
             .square, .btn {
@@ -253,6 +243,10 @@ include('sideBar.html');
 
     <body>
 
+        <?php
+        include('navBar.php');
+        include('sideBar.html');
+        ?>
 
         <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 
@@ -298,20 +292,7 @@ include('sideBar.html');
 
                                 </div>
                             </div>
-                            <div class="row overview">
-                                <div class="col-md-4 user-pad text-center">
-                                    <h3>FOLLOWERS</h3>
-                                    <h4>2,784</h4>
-                                </div>
-                                <div class="col-md-4 user-pad text-center">
-                                    <h3>FOLLOWING</h3>
-                                    <h4>456</h4>
-                                </div>
-                                <div class="col-md-4 user-pad text-center">
-                                    <h3>APPRECIATIONS</h3>
-                                    <h4>4,901</h4>
-                                </div>
-                            </div>
+                         
                         </div>
 
                     </div>
@@ -321,18 +302,16 @@ include('sideBar.html');
 
             </div>	<!--/.main-->
         </div>
+
+     <?php
+		include('packages_js.html');
+		?>
     </body>
 
-    <script src="bootstrap/js/jquery-1.11.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/chart.min.js"></script>
-    <script src="bootstrap/js/chart-data.js"></script>
-    <script src="bootstrap/js/easypiechart.js"></script>
-    <script src="bootstrap/js/easypiechart-data.js"></script>
-    <script src="bootstrap/js/bootstrap-datepicker.js"></script>
+
+
     <script>
-        $('#calendar').datepicker({
-        });
+
 
         !function ($) {
             $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
@@ -374,6 +353,10 @@ include('sideBar.html');
                 }
             ); 
         });
+        
+        $('.navbar-toggle').click(function(){
+           $('#sidebar-collapse').toggle();
+        });  //zaid code
     </script>	
 
 

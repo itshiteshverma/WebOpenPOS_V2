@@ -1,6 +1,6 @@
 <?php
 // include Database connection file 
-include("db_connection.php");
+include("../db_connection.php");
 
 
 // Design initial table header 

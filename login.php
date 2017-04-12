@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("connection.php");
+include("db_connection.php");
 if(isset($_GET['logout'])==1 AND isset($_SESSION['id'])){
     session_destroy();
 
@@ -25,11 +25,7 @@ if((isset($_POST['submit'])) AND $_POST['submit']=="Sign Up" ){
 
     else{ //Real Logic
 
-
-        include("ajax/db_connection.php");
-
-
-        $query2="SELECT * FROM `user` WHERE email='".$_POST['email']."'";
+   $query2="SELECT * FROM `user` WHERE email='".$_POST['email']."'";
         $result2 = mysqli_query($db,$query2);
         $row = mysqli_fetch_array($result2);
 
