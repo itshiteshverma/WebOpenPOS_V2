@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6338cb65-20f5-4046-a740-64acb3644b20" name="Default" comment="second update">
+    <list default="true" id="6338cb65-20f5-4046-a740-64acb3644b20" name="Default" comment="third update">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/images/noimg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/argo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/chirag.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/kamlesh.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/mohit.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/naresh.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/nilesh.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/nitu.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/rahul.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/rohan.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/rohit.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/sapta.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/saurab.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/suresh.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/tanishq.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user/zaid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/WebOpenPOS.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AddEmployee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/getRecommendationItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax/recommendItemHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/ChartUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/addRecord.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/analysisItemPrediction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/deleteUser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxEmployee/readRecords.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxitem/analysisItemPrediction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxitem/analysisItemSuggestion_QTYandPrice.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxitem/analysisItemSuggestion_SALE.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxitem/tableItemMain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajaxitem/tableSingleItemPredector.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysisEmployee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/analysisItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/css/star-rating.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/LANG.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/locales/zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap/js/star-rating.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_connection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages_css.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages_js.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testChart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testChart2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testChartData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testml.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sideBar.html" afterPath="$PROJECT_DIR$/sideBar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,7 +164,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideBar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sideBar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sideBar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
@@ -123,10 +177,20 @@
       <file leaf-file-name="analysisItem.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/analysisItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="185" column="56" lean-forward="true" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
+            <state relative-caret-position="121">
+              <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addRecord.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ajaxEmployee/addRecord.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1493578969230" expanded="true" signature="451:617" ph="INSERT INTO item... " />
               </folding>
             </state>
           </provider>
@@ -156,6 +220,7 @@
         <option value="$PROJECT_DIR$/ajaxEmployee/ChartUser.php" />
         <option value="$PROJECT_DIR$/AddEmployee.php" />
         <option value="$PROJECT_DIR$/analysisItem.php" />
+        <option value="$PROJECT_DIR$/ajaxEmployee/addRecord.php" />
       </list>
     </option>
   </component>
@@ -645,7 +710,7 @@
       <workItem from="1492413667969" duration="68000" />
       <workItem from="1492414002016" duration="778000" />
       <workItem from="1493537379802" duration="378000" />
-      <workItem from="1493538035813" duration="4184000" />
+      <workItem from="1493538035813" duration="4390000" />
     </task>
     <task id="LOCAL-00001" summary="second update">
       <created>1491975655004</created>
@@ -654,11 +719,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491975655004</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second update">
+      <created>1493578774045</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493578774045</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6558000" />
+    <option name="totallyTimeSpent" value="6764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -706,7 +778,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second update" />
-    <option name="LAST_COMMIT_MESSAGE" value="second update" />
+    <MESSAGE value="third update" />
+    <option name="LAST_COMMIT_MESSAGE" value="third update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -942,16 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analysisItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="185" column="56" lean-forward="true" selection-start-line="185" selection-start-column="56" selection-end-line="185" selection-end-column="56" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/item.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306">
@@ -969,6 +1032,24 @@
         <state relative-caret-position="121">
           <caret line="14" column="76" lean-forward="false" selection-start-line="14" selection-start-column="76" selection-end-line="14" selection-end-column="76" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysisItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="53" column="59" lean-forward="false" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxEmployee/addRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <marker date="1493578969230" expanded="true" signature="451:617" ph="INSERT INTO item... " />
+          </folding>
         </state>
       </provider>
     </entry>
